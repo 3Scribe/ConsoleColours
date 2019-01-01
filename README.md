@@ -3,6 +3,32 @@
 **Eddie Gahan**
 **July 2018**
 
+**Locations**
+
+Source code and an example console application are available under MIT licence and cam be found here: https://github.com/3Scribe/ConsoleColours
+
+A NuGet Package of the class compiled in to a class library can be found here: https://www.nuget.org/packages/3Scribe.Utilities.ConsoleColours
+
+**Quick Start**
+
+Reference the following namespace in you code to access the console enhancements
+
+````csharp
+using ConsoleColours;
+````
+
+In your code, call the following method to activate the console enhancements:
+
+````csharp
+ANSIConsole.ActivateConsole();
+````
+
+You will then be able to enhance your console output by adding the a reference to the ConsoleEffects class in amongst your text like this:
+
+````csharp
+Console.WriteLine("Sometimes you might need to " + ConsoleEffects.Underline + "underline" + ConsoleEffects.NoUnderline + " some words, or make them " + ConsoleEffects.Bold + "bolder" + ConsoleEffects.Default + " to make them stand out.");
+````
+
 **Intro**
 
 With the rise of .Net Core, GUI-less Console applications have come back into popular usage which is perfectly fine.  It’s just that they’re so bland; black and white and basic text when sometimes you need a splash of colour or an enhancement to bring focus to something of importance.  Recently, when developing a console app, I thought it would be nice to underline a single letter in a command to show what button could be pressed to trigger the command; similar to what you see when you press the Alt button in a Windows application.  After a bit of research, I found that it’s perfectly easy to do this and more with your console output.  Here’s what I found:
